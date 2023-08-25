@@ -4,9 +4,9 @@ import {
 } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
-import BookCollection from './components/BookCollection';
 import NotFound from './components/NotFound';
 import Navbar from './components/Navbar';
+import Categories from './components/Categories';
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="*" element={<NotFound />} />
-            <Route path="/categories" element={<BookCollection />} />
+            <Route path="/categories" element={<Categories />} />
           </Routes>
         </BrowserRouter>
       </header>
