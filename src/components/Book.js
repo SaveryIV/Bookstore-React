@@ -5,19 +5,22 @@ import { removeBook } from '../redux/books/booksSlice';
 const Book = ({ title, author, item_id: ïtemId }) => {
   const dispatch = useDispatch();
 
-  const handleRemove = () => {
+  const handleRemove = (e) => {
+    e.prevetDefault();
     dispatch(removeBook(ïtemId));
   };
 
   return (
     <div>
-      <div>
-        <p>{title}</p>
-        <p>{author}</p>
-      </div>
-      <button type="button" onClick={handleRemove}>
-        Remove
-      </button>
+      <form onSubmit={handleRemove}>
+        <div>
+          <p>{title}</p>
+          <p>{author}</p>
+        </div>
+        <button type="submit">
+          Remove
+        </button>
+      </form>
     </div>
   );
 };
