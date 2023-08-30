@@ -1,25 +1,22 @@
-/* eslint-disable react/no-array-index-key */
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from './Book';
-import AddBook from './AddBook';
 
-function BookCollection() {
-  const books = [
-    { title: 'A', author: 'Mr.A' },
-    { title: 'B', author: 'Mr.B' },
-    { title: 'C', author: 'Mr.C' },
-  ];
+const BookCollection = () => {
+  const bookList = useSelector((state) => state.book.bookList);
 
   return (
     <>
-      {books.map((book, index) => (
-        <div key={index}>
-          <Book title={book.title} author={book.author} />
-        </div>
+      {bookList.map((book) => (
+        <Book
+          key={book.item_id}
+          title={book.title}
+          author={book.author}
+          item_id={book.item_id}
+        />
       ))}
-      <AddBook />
     </>
   );
-}
+};
 
 export default BookCollection;

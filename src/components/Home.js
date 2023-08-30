@@ -1,14 +1,12 @@
-import ShowBook from './ShowBook';
+import BookCollection from './BookCollection';
 import AddBook from './AddBook';
 
-function Home() {
-  return (
-    <>
-      <h1>Hello from Home!</h1>
-      <ShowBook />
-      <AddBook />
-    </>
-  );
-}
+const Home = () => (
+  <>
+    <h1>Hello from Home!</h1>
+    <BookCollection />
+    <AddBook />
+  </>
+);
 
 export default Home;

@@ -1,14 +1,12 @@
-/* eslint-disable camelcase */
-/* eslint-disable import/no-extraneous-dependencies */
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
 
-function Book({ title, author, item_id }) {
+const Book = ({ title, author, item_id: ïtemId }) => {
   const dispatch = useDispatch();
 
   const handleRemove = () => {
-    dispatch(removeBook(item_id));
+    dispatch(removeBook(ïtemId));
   };
 
   return (
@@ -17,10 +15,12 @@ function Book({ title, author, item_id }) {
         <p>{title}</p>
         <p>{author}</p>
       </div>
-      <button type="button" onClick={handleRemove}>Remove</button>
+      <button type="button" onClick={handleRemove}>
+        Remove
+      </button>
     </div>
   );
-}
+};
 
 Book.propTypes = {
   title: PropTypes.string.isRequired,

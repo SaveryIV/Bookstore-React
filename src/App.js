@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import {
   BrowserRouter, Routes, Route,
 } from 'react-router-dom';
