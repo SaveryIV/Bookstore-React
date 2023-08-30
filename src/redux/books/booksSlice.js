@@ -28,11 +28,11 @@ const bookSlice = createSlice({
   initialState,
   reducers: {
     addBook: (state, action) => {
-      state.bookList = state.bookList.contact(action.payload);
+      state.bookList = state.bookList.concat(action.payload);
     },
 
     removeBook: (state, action) => {
-      state.bookList = state.bookList.filter((book) => book !== action.payload);
+      state.bookList = state.bookList.filter((book) => book.item_id !== action.payload);
     },
   },
 });
