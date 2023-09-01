@@ -27,7 +27,6 @@ const AddBook = () => {
 
   return (
     <div>
-      <p>Add a new Book!</p>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
