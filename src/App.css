@@ -1,3 +1,325 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+
+:root {
+  --Montserrat: 'Montserrat', sans-serif;
+  --RobotoSlab: 'Roboto Slab', serif;
+  --azure: #0290ff;
+  --z: #fafafa;
+  --white: #e8e8e8;
+  --white-two: #fff;
+  --cool-blue: #4386bf;
+  --very-light-pink: #c4c4c4;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f5f6fa;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--white-two);
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.container-title {
+  display: flex;
+  gap: 30px;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+a {
+  text-decoration: none;
   color: black;
+  opacity: 0.5;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: var(--Montserrat);
+  font-size: 0.813rem;
+  font-weight: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  opacity: 0.5;
+}
+
+/* Form styles */
+form {
+  margin: 0 3rem 4rem 3rem;
+  display: flex;
+  gap: 2rem;
+}
+
+input {
+  width: 40%;
+  padding: 1rem 0.5rem;
+  border-radius: 2px;
+  border: solid 1px var(--white);
+  background-color: var(--white-two);
+  font-size: 1rem;
+  font-family: var(--Montserrat);
+  font-weight: bolder;
+  letter-spacing: -0.15px;
+  color: var(--very-light-pink);
+}
+
+button[type='submit'] {
+  width: 10%;
+  background-color: var(--azure);
+  border: none;
+  font-family: var(--RobotoSlab);
+  font-size: 0.813rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white-two);
+}
+
+.active {
+  opacity: 1;
+}
+
+.store {
+  padding-left: 3rem;
+  font-family: var(--Montserrat);
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: var(--azure);
+}
+
+.card {
+  margin: 2rem auto;
+  width: 85%;
+  padding: 2rem 4rem 1.625rem;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  background-color: var(--white-two);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.book-category {
+  margin: 0 2.438rem 0 0;
+  opacity: 0.5;
+  font-family: var(--Montserrat);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #121212;
+}
+
+.book-title {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+  font-family: var(--RobotoSlab);
+}
+
+.book-author {
+  margin: 0;
+  font-family: var(--RobotoSlab);
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--cool-blue);
+}
+
+ul {
+  font-family: var(--Montserrat);
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding-left: 0;
+  align-items: center;
+}
+
+.comment-btn,
+.remove-btn,
+.edit-btn {
+  font-family: var(--RobotoSlab);
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--cool-blue);
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.book-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-info {
+  width: 40%;
+}
+
+.book-info p {
+  padding-left: 7px;
+}
+
+.item-progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: var(--Montserrat);
+}
+
+.main-levels {
+  font-family: var(--RobotoSlab);
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  opacity: 0.5;
+}
+
+.container-circle {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.circle {
+  margin-right: 30px;
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.main-task {
+  font-family: var(--RobotoSlab);
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.Update-progress {
+  font-family: var(--RobotoSlab);
+  padding: 0.8em 1.4rem;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: var(--white-two);
+  border-radius: 3px;
+  background-color: var(--azure);
+  border: none;
+}
+
+.Line {
+  width: 90%;
+  border: solid 1px var(--white);
+  margin: 0 auto;
+}
+
+.form-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.form-title {
+  font-family: var(--Montserrat);
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.complete-task {
+  font-family: var(--Montserrat);
+  margin: 0;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.level-one {
+  width: 0.125rem;
+  height: 1.5rem;
+  margin: 0.75rem 1.063rem 0 0.938rem;
+  border: solid 1px var(--white);
+}
+
+.level-two {
+  width: 0.125rem;
+  height: 4.375rem;
+  margin: 0.75rem 1.063rem 0 0.938rem;
+  border: solid 1px var(--white);
+}
+
+.task-progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.completed {
+  margin: 0;
+  border-radius: 4px;
+  border: none;
+  color: var(--very-light-pink);
+}
+
+.levels {
+  margin-right: 4rem;
+}
+
+.hr {
+  border: 1px solid gray;
+  margin: 0 3rem;
+}
+
+.new-book {
+  padding: 0 3rem 0.5rem 3rem;
+  font-family: var(--RobotoSlab);
+  color: #888;
 }
