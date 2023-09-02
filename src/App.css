@@ -27,6 +27,7 @@ header {
 
 .title {
   display: flex;
+  margin: 1rem;
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
@@ -222,6 +223,7 @@ ul {
 
 .container-circle {
   display: flex;
+  margin: 1rem;
   justify-content: flex-end;
 }
 
