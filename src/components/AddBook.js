@@ -26,27 +26,31 @@ const AddBook = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Title..."
-          name="title"
-          value={input.title}
-          onChange={getInputs}
-        />
-        <input
-          type="text"
-          placeholder="Author..."
-          name="author"
-          value={input.author}
-          onChange={getInputs}
-        />
-        <button type="submit">
-          Add Book
-        </button>
-      </form>
-    </div>
+    <>
+      <hr className="line" />
+      <p className="add-book-title">ADD NEW BOOK</p>
+      <div>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Title..."
+            name="title"
+            value={input.title}
+            onChange={getInputs}
+          />
+          <input
+            type="text"
+            placeholder="Author..."
+            name="author"
+            value={input.author}
+            onChange={getInputs}
+          />
+          <button type="submit">
+            Add Book
+          </button>
+        </form>
+      </div>
+    </>
   );
 };
 
