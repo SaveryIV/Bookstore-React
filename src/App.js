@@ -9,7 +9,7 @@ import Categories from './components/Categories';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <header className="App-header">
         <BrowserRouter>
           <Navbar />
